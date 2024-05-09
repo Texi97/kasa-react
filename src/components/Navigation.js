@@ -5,7 +5,7 @@ const Navigation = () => {
   return (
     <div className="navigation">
       {/* Les images accessibles depuis la balise IMG sont accessibles dans "public" */}
-      <img src="./logo-kasa.png" alt="logo Kasa" />
+      <img src="/logo-kasa.png" alt="logo Kasa" />
       <ul>
         <NavLink
           to="/"

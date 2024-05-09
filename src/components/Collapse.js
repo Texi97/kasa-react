@@ -9,19 +9,51 @@ function Collapse({ title, content }) {
     setIsOpen(!isOpen);
   };
 
+  //   return (
+  //     <div className="collapse_box">
+  //       <div className="collapse_items">
+  //         <div className="collapse_transition">
+  //           <h2 className="collapse_title">{title}</h2>
+  //           <img
+  //             src="./arrow.png"
+  //             alt="Flèche pour dérouler le contenu"
+  //             className={`arrow ${isOpen ? "rotate" : ""}`}
+  //             onClick={switchCollapse}
+  //           />
+  //         </div>
+  //       </div>
+  //       <div
+  //         className={`collapse_content_div ${isOpen ? "expand" : "collapsed"}`}
+  //       >
+  //         {Array.isArray(content) ? ( // Si le contenu est ouvert et est un tableau, il est mappé et affiché sous forme de liste ("Equipement").
+  //           <ul className="collapse_list">
+  //             {content.map((item, index) => (
+  //               <li key={index}>{item}</li>
+  //             ))}
+  //           </ul>
+  //         ) : (
+  //           // Sinon il est affiché sous forme d'élément unique <p> ("Description").
+  //           <p className="collapse_content">{content}</p>
+  //         )}
+  //       </div>
+  //     </div>
+  //   );
+  // }
+
   return (
-    <div className="collapse_box">
-      <div className="collapse_items">
-        <div className="collapse_transition">
-          <h2 className="collapse_title">{title}</h2>
+    <div className="collapse_all">
+      <div className="collapse_item">
+        <div className="collapse">
+          <h3 className="collapse_title">{title}</h3>
           <img
             src="./arrow.png"
-            alt="Flèche pour dérouler le contenu"
+            alt="Flèche pour ouvrir ou fermer le contenu"
             className={`arrow ${isOpen ? "rotate" : ""}`}
             onClick={switchCollapse}
           />
         </div>
       </div>
+
       <div
         className={`collapse_content_div ${isOpen ? "expand" : "collapsed"}`}
       >

@@ -1,11 +1,11 @@
-.collapse_elements {
+.collapse_all {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  margin: 38px 0px;
+  width: 1023px;
+  margin: auto;
 }
 
-.collapse_box {
+.collapse_item {
   display: flex;
   flex-direction: column;
   width: 1023px;
@@ -16,26 +16,26 @@
   margin-inline: auto;
 }
 
-.collapse_item {
-  height: 54px;
-  background-color: #ff6060;
-  border-radius: 5px;
-  text-align: center;
-  z-index: 100;
-}
-
-.collapse_transition {
+.collapse {
   display: flex;
   height: 54px;
   justify-content: space-between;
   align-items: center;
 
   img {
-    margin: 0;
+    margin: 0px;
   }
 }
 
+.collapse_elements {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin: 38px 0px;
+}
+
 .collapse_title {
+  font-family: Montserrat;
   font-size: 24px;
   font-weight: 700;
   color: #ffffff;
@@ -48,6 +48,10 @@
   margin-left: 20px;
   margin-right: 20px;
   line-height: 1.5;
+  font-family: Montserrat;
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .collapse_list {
@@ -78,22 +82,14 @@
   border-radius: 0px 0px 5px 5px;
   overflow: hidden;
   z-index: 1;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-
-  p {
-    color: black;
-    font-family: Montserrat;
-    font-weight: 400;
-    font-size: 17px;
-  }
+  width: 1058px;
+  margin: auto;
 }
 
 /* Animation Collapse */
 
 .expand {
   animation: fadeIn 0.6s ease forwards;
-  overflow: visible;
 }
 
 @keyframes fadeIn {
@@ -123,5 +119,53 @@
     opacity: 1;
     transform: translateY(-30%);
     height: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .collapse_item {
+    height: 45px;
+  }
+
+  .arrow {
+    width: 25px;
+    height: 25px;
+    margin: 10px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .collapse_all {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .collapse_item {
+    height: 30px;
+  }
+
+  .collapse_title {
+    font-size: 13px;
+    margin: 7px 10px 10px;
+  }
+
+  .collapse_content {
+    font-size: 12px;
+    margin: 15px 20px;
+  }
+
+  .arrow {
+    width: 20px;
+    height: 20px;
+    margin: 5px 10px;
+  }
+
+  .collapse_list {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
+  .collapse_list li {
+    margin-bottom: 3px;
   }
 }
