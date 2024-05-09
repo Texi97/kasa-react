@@ -1,0 +1,27 @@
+.footer {
+  background-color: black;
+  height: 209px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+
+.footer img {
+  width: 122px;
+  height: 39.44px;
+  margin-top: 66px;
+}
+
+h2 {
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 29px;
+}

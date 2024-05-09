@@ -1,0 +1,30 @@
+@import "./components/navigation";
+@import "./components/banner";
+@import "./components/card";
+@import "./components/footer";
+@import "./components/collapse";
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url(../assets/fonts/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  src: local("Montserrat"),
+    url(../assets/fonts/Montserrat-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: local("Montserrat"),
+    url(../assets/fonts/Montserrat-Bold.ttf) format("truetype");
+}
+
+body {
+  max-width: 1440px;
+  margin: auto;
+}

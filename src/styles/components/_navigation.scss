@@ -1,0 +1,26 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  margin: 45px 100px 0px 100px;
+  img {
+    width: 210.32px;
+    margin-right: auto;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 57px;
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .active {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .inactive {
+    color: #000;
+    text-decoration: none;
+  }
+}
