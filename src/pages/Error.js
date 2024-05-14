@@ -7,15 +7,19 @@ import "../styles/_error404.scss";
 const Error = () => {
   return (
     <div>
-      <Navigation />
-      <div className="error_404">
-        <h3>404</h3>
-        <h4>Oups! La page que vous demandez n'existe pas.</h4>
-        <NavLink to="/">
-          <p>Retourner sur la page d'accueil</p>
-        </NavLink>
+      <div className="container_page">
+        <Navigation />
+        <div className="error_404">
+          <h3>404</h3>
+          <h4>Oups! La page que vous demandez n'existe pas.</h4>
+          <NavLink to="/">
+            <p>Retourner sur la page d'accueil</p>
+          </NavLink>
+        </div>
       </div>
-      <Footer />
+      <div className="container_footer">
+        <Footer />
+      </div>
     </div>
   );
 };

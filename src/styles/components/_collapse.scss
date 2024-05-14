@@ -1,19 +1,22 @@
 .collapse_all {
   display: flex;
   flex-direction: column;
-  width: 1023px;
-  margin: auto;
+  // margin: auto;
 }
 
 .collapse_item {
   display: flex;
   flex-direction: column;
-  width: 1023px;
+  max-width: 1023px;
+  width: 100%;
   background-color: #ff6060;
   padding: 10px 20px 10px 15px;
   height: 54px;
   border-radius: 5px;
   margin-inline: auto;
+  @media only screen and (max-width: 600px) {
+    height: 30px;
+  }
 }
 
 .collapse {
@@ -25,13 +28,75 @@
   img {
     margin: 0px;
   }
+  h3 {
+    @media only screen and (max-width: 600px) {
+      font-size: 13px;
+    }
+  }
 }
 
-.collapse_elements {
+.collapse_elements_about {
   display: flex;
   flex-direction: column;
   gap: 28px;
   margin: 38px 0px;
+  align-items: center;
+  margin-right: 35px;
+  @media only screen and (max-width: 600px) {
+    gap: 20px;
+  }
+}
+
+.collapse_elements_lodging {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 110px;
+  margin: 0px 0px 50px 0px;
+  // width: 1240px;
+  // justify-content: center;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .collapse_item {
+    // width: 547px;
+    height: 52px;
+    margin: 0;
+
+    @media only screen and (max-width: 600px) {
+      height: 30px;
+    }
+  }
+
+  .collapse_content_div {
+    // max-width: 582px;
+    margin: 0;
+    margin-right: -35px;
+  }
+
+  .collapse_all {
+    margin: 0;
+    // align-items: center;
+    width: 547px;
+    flex: 1;
+    margin-right: 35px;
+
+    @media only screen and (min-width: 601px) and (max-width: 900px) {
+      width: 95%;
+    }
+    @media only screen and (max-width: 600px) {
+      width: 94%;
+    }
+  }
 }
 
 .collapse_title {
@@ -59,6 +124,10 @@
   padding-left: 20px;
   font-size: 18px;
   margin-top: 27px;
+  font-family: Montserrat;
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .collapse_list li {
@@ -82,8 +151,9 @@
   border-radius: 0px 0px 5px 5px;
   overflow: hidden;
   z-index: 1;
-  width: 1058px;
+  max-width: 1058px;
   margin: auto;
+  margin-right: -35px;
 }
 
 /* Animation Collapse */
@@ -122,50 +192,50 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .collapse_item {
-    height: 45px;
-  }
+// @media (max-width: 1024px) {
+//   .collapse_item {
+//     height: 45px;
+//   }
 
-  .arrow {
-    width: 25px;
-    height: 25px;
-    margin: 10px 10px;
-  }
-}
+//   .arrow {
+//     width: 25px;
+//     height: 25px;
+//     margin: 10px 10px;
+//   }
+// }
 
-@media (max-width: 768px) {
-  .collapse_all {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+// @media (max-width: 768px) {
+//   .collapse_all {
+//     width: 100%;
+//     margin-bottom: 20px;
+//   }
 
-  .collapse_item {
-    height: 30px;
-  }
+//   .collapse_item {
+//     height: 30px;
+//   }
 
-  .collapse_title {
-    font-size: 13px;
-    margin: 7px 10px 10px;
-  }
+//   .collapse_title {
+//     font-size: 13px;
+//     margin: 7px 10px 10px;
+//   }
 
-  .collapse_content {
-    font-size: 12px;
-    margin: 15px 20px;
-  }
+//   .collapse_content {
+//     font-size: 12px;
+//     margin: 15px 20px;
+//   }
 
-  .arrow {
-    width: 20px;
-    height: 20px;
-    margin: 5px 10px;
-  }
+//   .arrow {
+//     width: 20px;
+//     height: 20px;
+//     margin: 5px 10px;
+//   }
 
-  .collapse_list {
-    font-size: 12px;
-    margin-top: 15px;
-  }
+//   .collapse_list {
+//     font-size: 12px;
+//     margin-top: 15px;
+//   }
 
-  .collapse_list li {
-    margin-bottom: 3px;
-  }
-}
+//   .collapse_list li {
+//     margin-bottom: 3px;
+//   }
+// }

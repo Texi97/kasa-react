@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom"; // Importez useParams pour extrair
 //étoiles svg
 import starFilled from "../assets/img/star-filled.svg";
 import starEmpty from "../assets/img/star-empty.svg";
+import Collapse from "../components/Collapse";
 
 const Lodging = () => {
   const { id } = useParams(); // Récupérez l'ID de l'URL
@@ -22,6 +23,8 @@ const Lodging = () => {
   const lodgingCity = pageData.location;
   const lodgingHost = pageData.host.name;
   const lodgingHostPicture = pageData.host.picture;
+  const lodgingDescription = pageData.description;
+  const lodgingEquipment = pageData.equipments;
 
   // Convertissez la chaîne de caractères en nombre pour la comparaison
   const rating = parseInt(pageData.rating);
@@ -35,30 +38,45 @@ const Lodging = () => {
 
   return (
     <div>
-      <Navigation />
-      <div className="slideshow_container">
-        <Slideshow data={data} />
-      </div>
-      <section className="infos_container">
-        <div className="lodging_infos">
-          <h1>{lodgingTitle}</h1>
-          <h2>{lodgingCity}</h2>
-          <ul>
-            {pageData.tags.map((tag, id) => (
-              <li key={id}>{tag}</li>
-            ))}
-          </ul>
+      <div className="container_page">
+        <Navigation />
+        <div className="slideshow_container">
+          <Slideshow data={data} />
         </div>
-        <div className="lodging_host">
-          <div className="lodging_host__infos">
-            <h3>{lodgingHost}</h3>
-            <img src={lodgingHostPicture} alt={lodgingHost} />
+        <section className="infos_container">
+          <div className="lodging_infos">
+            <h1>{lodgingTitle}</h1>
+            <h2>{lodgingCity}</h2>
+            <ul>
+              {pageData.tags.map((tag, id) => (
+                <li key={id}>{tag}</li>
+              ))}
+            </ul>
           </div>
-          <div className="lodging_host__rating">{stars}</div>
+          <div className="lodging_host">
+            <div className="lodging_host__infos">
+              <h3>{lodgingHost}</h3>
+              <img src={lodgingHostPicture} alt={lodgingHost} />
+            </div>
+            <div className="lodging_host__rating">{stars}</div>
+          </div>
+        </section>
+        <div className="collapse_elements_lodging">
+          <Collapse
+            title="Description"
+            content={lodgingDescription}
+            className="collapse_lodging"
+          />
+          <Collapse
+            title="Équipements"
+            content={lodgingEquipment}
+            className="collapse_lodging"
+          />
         </div>
-      </section>
-
-      <Footer />
+      </div>
+      <div className="container_footer">
+        <Footer />
+      </div>
     </div>
   );
 };

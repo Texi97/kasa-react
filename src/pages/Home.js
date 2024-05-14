@@ -8,14 +8,18 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <div>
-      <Navigation />
-      <Banner />
-      <ul className="card">
-        {data.map((data, id) => (
-          <Card key={id} data={data} />
-        ))}
-      </ul>
-      <Footer />
+      <div className="container_page">
+        <Navigation />
+        <Banner />
+        <ul className="card">
+          {data.map((data, id) => (
+            <Card key={id} data={data} />
+          ))}
+        </ul>
+      </div>
+      <div className="container_footer">
+        <Footer />
+      </div>
     </div>
   );
 };
