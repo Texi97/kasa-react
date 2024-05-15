@@ -10,6 +10,12 @@
     font-style: normal;
     font-weight: 700;
     margin: 139px 0px;
+    @media only screen and (max-width: 600px) {
+      font-size: 96px;
+    }
+    @media only screen and (min-width: 601px) and (max-width: 900px) {
+      font-size: 192px;
+    }
   }
 
   h4 {
@@ -20,6 +26,12 @@
     font-weight: 500;
     margin: 0;
     margin-bottom: 139px;
+    @media only screen and (max-width: 600px) {
+      font-size: 18px;
+    }
+    @media only screen and (min-width: 601px) and (max-width: 900px) {
+      font-size: 27px;
+    }
   }
 
   a {
@@ -30,5 +42,11 @@
     font-weight: 500;
     text-decoration: underline;
     margin-bottom: 139px;
+    @media only screen and (max-width: 600px) {
+      font-size: 14px;
+    }
+    @media only screen and (min-width: 601px) and (max-width: 900px) {
+      font-size: 16px;
+    }
   }
 }
