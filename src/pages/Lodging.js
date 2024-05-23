@@ -19,12 +19,13 @@ const Lodging = () => {
     return null;
   }
 
-  const lodgingTitle = pageData.title;
-  const lodgingCity = pageData.location;
-  const lodgingHost = pageData.host.name;
-  const lodgingHostPicture = pageData.host.picture;
-  const lodgingDescription = pageData.description;
-  const lodgingEquipment = pageData.equipments;
+  const {
+    title: lodgingTitle,
+    location: lodgingCity,
+    description: lodgingDescription,
+    equipments: lodgingEquipment,
+  } = pageData;
+  const { name: lodgingHost, picture: lodgingHostPicture } = pageData.host;
 
   // Convertissez la chaîne de caractères en nombre pour la comparaison
   const rating = parseInt(pageData.rating);
