@@ -1,4 +1,4 @@
-# Kasa
+# Kasa 🏡
 
 ## Description du projet
 
