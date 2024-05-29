@@ -1,9 +1,7 @@
-import React from "react";
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
+import React, { useEffect } from "react";
 import Slideshow from "../components/Slideshow";
 import data from "../data/data.json";
-import { useParams } from "react-router-dom"; // Importez useParams pour extraire les paramètres d'URL
+import { useParams, useNavigate } from "react-router-dom"; // Importez useParams pour extraire les paramètres d'URL
 
 //étoiles svg
 import starFilled from "../assets/img/star-filled.svg";
@@ -12,10 +10,17 @@ import Collapse from "../components/Collapse";
 
 const Lodging = () => {
   const { id } = useParams(); // Récupérez l'ID de l'URL
+  const navigate = useNavigate(); // Pour la redirection
   const pageData = data.find((item) => item.id === id);
 
+  useEffect(() => {
+    if (!pageData) {
+      console.error("Page data not found for ID:", id);
+      navigate("/logement/error");
+    }
+  }, [id, pageData, navigate]);
+
   if (!pageData) {
-    console.error("Page data not found for ID:", id);
     return null;
   }
 
@@ -40,7 +45,6 @@ const Lodging = () => {
   return (
     <div>
       <div className="container_page">
-        <Navigation />
         <div className="slideshow_container">
           <Slideshow data={data} />
         </div>
@@ -74,9 +78,6 @@ const Lodging = () => {
             className="collapse_lodging"
           />
         </div>
-      </div>
-      <div className="container_footer">
-        <Footer />
       </div>
     </div>
   );
