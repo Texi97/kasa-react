@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.img_robinet {
+  display: flex;
+  height: 687px;
+  justify-content: center;
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+.image_about {
+  max-width: 483px;
+  img {
+    border-radius: 10px;
+  }
+}
+
+.AboutSection {
+  background-color: #182944;
+  padding: 80px 0px 0px 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  .about_img {
+    max-height: 620px;
+    img {
+      height: 620px;
+      border-radius: 15px;
+      transform: scaleX(-1);
+    }
+  }
+  .about_text {
+    max-width: 536px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h3 {
+      color: #fdb52a;
+      font-family: "outfit";
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+
+  .about_numbers {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .about_details {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+      .number {
+        color: white;
+        font-family: "outfit";
+        font-size: 68px;
+        font-weight: 700;
+        .span_orange {
+          color: #fdb52a;
+        }
+        .span_blue {
+          color: #3083ff;
+        }
+      }
+      .number_details {
+        color: white;
+        font-family: "outfit";
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: -26px;
+      }
+    }
+  }
+}
+
+.OurServices {
+  display: flex;
+  justify-content: center;
+
+  .OurServices_text {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 60px;
+    gap: 10px;
+    max-width: 650px;
+    h3 {
+      color: #3083ff;
+      font-family: "outfit";
+      font-size: 20px;
+      font-weight: 700;
+    }
+    h2 {
+      color: #182944;
+      font-family: "outfit";
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    p {
+      color: #6e7891;
+      font-family: "outfit";
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+  .OurServices_cards_container {
+    max-height: 582px;
+    max-width: 387px;
+    border-radius: 15px;
+    background-color: white;
+  }
+}
+
+.features-container {
+  max-width: 1280px;
+  img {
+    max-height: 600px;
+    object-fit: cover;
+  }
+}

@@ -1,25 +1,22 @@
 import React from "react";
 import Navigation from "../components/Navigation";
-import Banner from "../components/Banner";
-import Card from "../components/Card";
-import data from "../data/data.json";
-import Footer from "../components/Footer";
+
+import ScrollingTestimonials from "../components/ScrollingTestimonials";
+import FeaturesSectionLeft from "../components/FeaturesSectionLeft";
+import FeaturesSectionRight from "../components/FeaturesSectionRight";
+import TestHero from "../components/TestHero";
+import CardCarousel from "../components/CardCarousel";
 
 const Home = () => {
   return (
     <div>
-      <div className="container_page">
-        <Navigation />
-        <Banner />
-        <ul className="card">
-          {data.map((data, id) => (
-            <Card key={id} data={data} />
-          ))}
-        </ul>
-      </div>
-      <div className="container_footer">
-        <Footer />
-      </div>
+      <Navigation />
+      <TestHero />
+      <ScrollingTestimonials />
+      <FeaturesSectionLeft id="Plomberie" />
+      <FeaturesSectionRight id="Chauffage" />
+
+      <CardCarousel />
     </div>
   );
 };
